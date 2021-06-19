@@ -1,0 +1,614 @@
+{
+	"info": {
+		"_postman_id": "be8b2a5e-98db-4e8a-970d-674c53499fdf",
+		"name": "alibabacloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cloud",
+			"item": [
+				{
+					"name": "http://localhost:4001/cloud-config-nacos-4001/config/test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4001/cloud-config-nacos-4001/config/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4001",
+							"path": [
+								"cloud-config-nacos-4001",
+								"config",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4002/sentinel/user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4002/cloud-sentinel-client-4002/sentinel/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4002",
+							"path": [
+								"cloud-sentinel-client-4002",
+								"sentinel",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4003/providerUser/getUserJson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4003/cloud-provider-4003/providerUser/getUserJson",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4003",
+							"path": [
+								"cloud-provider-4003",
+								"providerUser",
+								"getUserJson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4003/providerUser/getUserObj",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4003/cloud-provider-4003/providerUser/getUserObj",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4003",
+							"path": [
+								"cloud-provider-4003",
+								"providerUser",
+								"getUserObj"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4003/providerUser/getUserById?id=1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4003/cloud-provider-4003/providerUser/getUserById?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4003",
+							"path": [
+								"cloud-provider-4003",
+								"providerUser",
+								"getUserById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4003/providerUser/addUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"zhudaolin\",\n    \"age\": 18\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4003/cloud-provider-4003/providerUser/addUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4003",
+							"path": [
+								"cloud-provider-4003",
+								"providerUser",
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4003/providerUser/addUserByParm?id=1&name=zhu&age=18",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4003/cloud-provider-4003/providerUser/addUserByParm?id=1&name=zhu&age=18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4003",
+							"path": [
+								"cloud-provider-4003",
+								"providerUser",
+								"addUserByParm"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "zhu"
+								},
+								{
+									"key": "age",
+									"value": "18"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4006/Consumer/getUserJson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4006/cloud-consumer-4006/consumer/getUserJson",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4006",
+							"path": [
+								"cloud-consumer-4006",
+								"consumer",
+								"getUserJson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4006/Consumer/addUser?id=1&name=zhu&age=18",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4006/cloud-consumer-4006/consumer/addUser?id=1&name=zhu&age=18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4006",
+							"path": [
+								"cloud-consumer-4006",
+								"consumer",
+								"addUser"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "zhu"
+								},
+								{
+									"key": "age",
+									"value": "18"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4006/consumer/addUserByJSON?id=1&name=zhu&age=16",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4006/cloud-consumer-4006/consumer/addUserByJSON?id=1&name=zhu&age=16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4006",
+							"path": [
+								"cloud-consumer-4006",
+								"consumer",
+								"addUserByJSON"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "zhu"
+								},
+								{
+									"key": "age",
+									"value": "16"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4006/Consumer/addUserByParm?id=1&name=zhu&age=18",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4006/cloud-consumer-4006/consumer/addUserByParm?id=1&name=zhu&age=18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4006",
+							"path": [
+								"cloud-consumer-4006",
+								"consumer",
+								"addUserByParm"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "zhu"
+								},
+								{
+									"key": "age",
+									"value": "18"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4006/feign/getUserJson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4006/cloud-consumer-4006/feign/getUserJson",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4006",
+							"path": [
+								"cloud-consumer-4006",
+								"feign",
+								"getUserJson"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4006/feign/getUserObj",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4006/cloud-consumer-4006/feign/getUserObj",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4006",
+							"path": [
+								"cloud-consumer-4006",
+								"feign",
+								"getUserObj"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4006/feign/getUserById?id=20",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4006/cloud-consumer-4006/feign/getUserById?id=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4006",
+							"path": [
+								"cloud-consumer-4006",
+								"feign",
+								"getUserById"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4006/feign/addUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 20,\n    \"name\": \"zhudaolin\",\n    \"age\": 16\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4006/cloud-consumer-4006/feign/addUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4006",
+							"path": [
+								"cloud-consumer-4006",
+								"feign",
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4006/feign/addUserByParam?id=1&name=zhudaolin&age=12",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4006/cloud-consumer-4006/feign/addUserByParam?id=1&name=zhudaolin&age=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4006",
+							"path": [
+								"cloud-consumer-4006",
+								"feign",
+								"addUserByParam"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "zhudaolin"
+								},
+								{
+									"key": "age",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/consumer/addUserByInf?id=1&name=zhu&age=18",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"account\":\"zhudaolin\",\n\t\"goodId\":1,\n\t\"goodName\":\"航空母舰\",\n\t\"count\":5,\n\t\"price\":900000000\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4004/cloud-provider-4004/Order/addOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"cloud-provider-4004",
+								"Order",
+								"addOrder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seata",
+			"item": [
+				{
+					"name": "http://localhost:4006/seata/addOrder?account=zhudaolin&goodId=2&count=10",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:4006/cloud-consumer-4006/seata/addOrder?account=zhudaolin&goodId=2&count=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4006",
+							"path": [
+								"cloud-consumer-4006",
+								"seata",
+								"addOrder"
+							],
+							"query": [
+								{
+									"key": "account",
+									"value": "zhudaolin"
+								},
+								{
+									"key": "goodId",
+									"value": "2"
+								},
+								{
+									"key": "count",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "zipkin",
+			"item": [
+				{
+					"name": "http://localhost:5001/slueth-zipkin/getUserJson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:5001/cloud-zipkin-client-5001/slueth-zipkin/getUserJson",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"cloud-zipkin-client-5001",
+								"slueth-zipkin",
+								"getUserJson"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

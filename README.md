@@ -1,13 +1,13 @@
+写的比较粗略，东西都在代码中，
+nacos配置中心、sentinel、seata、zipkin等服务自己搭建，本项目主要是client代码。
+
 技术栈：
 SpringCloud Alibaba + nacos + Sentinel + Seata + (Slueth+zipkin) + OpenFeign + GateWay
 
 mybatisPlus + druid 
 
+请求url，从postman导出的，zpic/alibabacloud.postman_collection.json，可导入postman测试
 
-
-
-
-写的比较粗略，东西都在代码中，服务器需要自己搭建
 ==========================================================================================================================nacos注册中心+配置中心
 源码下载:https://github.com/alibaba/nacos
 编译
@@ -86,4 +86,4 @@ java -jar zipkin-server-2.23.3-SNAPSHOT-exec.jar --STORAGE_TYPE=mysql --MYSQL_HO
 ![zipkin调用链展示](zpic/zipkin-traces1.png "zipkin调用链展示")
 ![zipkin服务依赖展示](zpic/zipkin-dependency1.png "zipkin服务依赖展示")
 
-=========================================================================================================================GateWay
+=========================================================================================================================GateWay 未完待续
