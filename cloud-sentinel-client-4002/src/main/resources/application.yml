@@ -1,0 +1,26 @@
+server:
+  port: 4002
+  servlet:
+    context-path: /${spring.application.name}
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+        clientIp: 127.0.0.1
+        #port: 8719 #默认8719，假如被占用了会自动从8719开始依次+1扫描。直至找到未被占用的端口
+      datasource:
+        flow:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            dataId: ${spring.application.name}-flow-rules
+            groupId: SENTINEL_GROUP #默认SENTINEL_GROUP 不要修改，
+            data-type: json
+            rule-type: flow
+  #zippkin  配置
+  zipkin:
+    base-url: http://127.0.0.1:5000/
+    discovery-client-enabled: false
+  sleuth:
+    sampler:
+      probability: 1.0
