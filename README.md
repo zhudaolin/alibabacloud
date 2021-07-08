@@ -7,8 +7,94 @@ SpringCloud Alibaba + nacos + Sentinel + Seata + (Slueth+zipkin) + OpenFeign + G
 mybatisPlus + druid 
 
 请求url，从postman导出的，zpic/alibabacloud.postman_collection.json，可导入postman测试
+工程结构(父工程alibabacloud)
+alibabacloud
+  -cloud-config-nacos-4001
+  -cloud-consumer-4006
+  -cloud-gateway-5002
+  -cloud-provider-4003
+  -cloud-provider-4004
+  -cloud-sentinel-client-4002
+  -cloud-zipkin-client-5001
+  -zdl-common-domain
+  -zdl-common-util
+  -zdl-service-util
+  -zdl-web-util
+  
+父工程依赖：
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-dependencies</artifactId>
+    <version>2.4.2</version>
+    <type>pom</type>
+    <scope>import</scope>
+</dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-dependencies</artifactId>
+    <version>2020.0.3</version>
+    <type>pom</type>
+    <scope>import</scope>
+</dependency>
+<dependency>
+    <groupId>com.alibaba.cloud</groupId>
+    <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+    <version>2021.1</version>
+    <type>pom</type>
+    <scope>import</scope>
+</dependency>
 
+子工程依据需求依赖
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <scope>runtime</scope>
+        <optional>true</optional>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-loadbalancer</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>com.alibaba.csp</groupId>
+        <artifactId>sentinel-datasource-nacos</artifactId>
+    </dependency>
+    
+    
 ==========================================================================================================================nacos注册中心+配置中心
+
 源码下载:https://github.com/alibaba/nacos
 编译
 /nacos下运行
@@ -23,7 +109,6 @@ db.password=1566023_Zan
 
 创建数据库nacos，并初始化nacos相关表\nacos\distribution\conf\nacos-mysql.sql
 
-
 启动->
 进入distribution/target/nacos-server-$version/nacos/bin
 运行
@@ -34,6 +119,7 @@ shutdown.cmd
 ![nacos配置中心](zpic/nacos-config-register-center.png "nacos配置中心")
 
 =========================================================================================================================sentinel服务降级-限流、熔断、、
+
 源码下载:https://github.com/alibaba/Sentinel/
 编译
 mvn -Dmaven.test.skip=true clean package
@@ -65,6 +151,7 @@ clusterMode：是否集群
 
 
 =========================================================================================================================Seata分布式事务
+
 源码下载:https://github.com/seata/seata
 编译mvn install
 修改E:\alibabaCloud\seata\server\src\main\resources下file.conf和registry.conf 配置mysql持久化及nacos
@@ -76,6 +163,7 @@ main方法运行服务
 
 
 =========================================================================================================================Slueth+zipkin链路追踪
+
 zipkin server
 下载源码编译，创建数据库及表
 进入.\zipkin\zipkin-server\target>
@@ -86,4 +174,4 @@ java -jar zipkin-server-2.23.3-SNAPSHOT-exec.jar --STORAGE_TYPE=mysql --MYSQL_HO
 ![zipkin调用链展示](zpic/zipkin-traces1.png "zipkin调用链展示")
 ![zipkin服务依赖展示](zpic/zipkin-dependency1.png "zipkin服务依赖展示")
 
-=========================================================================================================================GateWay 未完待续
+=========================================================================================================================GateWay 
