@@ -39,7 +39,7 @@ public class CodeGenerator2 {
         dsc.setUrl("jdbc:mysql://127.0.0.1:3306/provider1?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("1566023_Zan");
+        dsc.setPassword("123456");
         mpg.setDataSource(dsc);
 
         // 包配置

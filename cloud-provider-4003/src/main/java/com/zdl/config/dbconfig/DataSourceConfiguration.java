@@ -38,7 +38,7 @@ public class DataSourceConfiguration {
         servletRegistrationBean.addUrlMappings("/druid/*");
         //登录查看信息的账号密码.
         servletRegistrationBean.addInitParameter("loginUsername", "root");
-        servletRegistrationBean.addInitParameter("loginPassword", "1566023_Zan");
+        servletRegistrationBean.addInitParameter("loginPassword", "123456");
         return servletRegistrationBean;
     }
 

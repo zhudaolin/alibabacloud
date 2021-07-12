@@ -105,7 +105,7 @@ spring.datasource.platform=mysql
 db.num=1
 db.url.0=jdbc:mysql://127.0.0.1:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai
 db.user=root
-db.password=1566023_Zan
+db.password=123456
 
 创建数据库nacos，并初始化nacos相关表\nacos\distribution\conf\nacos-mysql.sql
 
@@ -168,7 +168,7 @@ zipkin server
 下载源码编译，创建数据库及表
 进入.\zipkin\zipkin-server\target>
 运行
-java -jar zipkin-server-2.23.3-SNAPSHOT-exec.jar --STORAGE_TYPE=mysql --MYSQL_HOST=127.0.0.1 --MYSQL_TCP_PORT=3306 --MYSQL_DB=nacos --MYSQL_USER=root --MYSQL_PASS=1566023_Zan --server.port=5000
+java -jar zipkin-server-2.23.3-SNAPSHOT-exec.jar --STORAGE_TYPE=mysql --MYSQL_HOST=127.0.0.1 --MYSQL_TCP_PORT=3306 --MYSQL_DB=nacos --MYSQL_USER=root --MYSQL_PASS=123456 --server.port=5000
 
 ![zipkinServer源码编译启动](zpic/zipkinServer-resource-build-start.png "zipkinServer源码编译启动")
 ![zipkin调用链展示](zpic/zipkin-traces1.png "zipkin调用链展示")
